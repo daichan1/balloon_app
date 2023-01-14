@@ -1,0 +1,44 @@
+body {
+  height: 100vh;
+  background: linear-gradient(skyblue, white);
+}
+
+.balloon-code {
+  position: relative;
+  left: 35px;
+  top: 98px;
+  width: 2px;
+  height: 70px;
+  background: #a0a0a0;
+  transform: rotate(5deg);
+}
+
+.normal-fly {
+  animation: fly_high 10s ease-in-out infinite 0.5s,
+            rolling_x 0.9s ease-in-out infinite alternate
+}
+
+.fast-fly {
+  animation: fly_high 7s ease-in infinite,
+            rolling_x 0.8s ease-in-out infinite alternate
+}
+
+.slow-fly {
+  animation: fly_high 13s ease-in-out infinite 1s,
+            rolling_x 1s ease-in-out infinite alternate
+}
+
+@keyframes rolling_x {
+  0% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-right: 10px;
+  }
+}
+
+@keyframes fly_high {
+  100% {
+    transform: translateY(-1000px);
+  }
+}
