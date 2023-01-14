@@ -45,6 +45,7 @@ function createBalloon(params, index) {
     const audioOrder = Math.floor(Math.random() * audioList.length)
     audioList[audioOrder].load()
     audioList[audioOrder].play()
+    audioList[audioOrder].currentTime = 0
     balloon.remove()
     const balloonOrder = Math.floor(Math.random() * balloonList.length)
     createBalloon(balloonList[balloonOrder], index + balloonList.length)
