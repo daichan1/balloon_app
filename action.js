@@ -43,7 +43,7 @@ function createBalloon(params, index) {
   balloon.appendChild(balloonCode)
   balloon.addEventListener('click', (e) => {
     const audioOrder = Math.floor(Math.random() * audioList.length)
-    audioList[audioOrder].currentTime = 0
+    audioList[audioOrder].load()
     audioList[audioOrder].play()
     balloon.remove()
     const balloonOrder = Math.floor(Math.random() * balloonList.length)
